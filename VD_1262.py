@@ -25,7 +25,7 @@ def main():
 	vel_msg.linear.z=0
 	vel_msg.angular.x = 0
 	vel_msg.angular.y = 0
-	vel_msg.angular.z = 0.5
+	vel_msg.angular.z = 0.2
 
 	# Setting the current time for distance calculation
         t0 = rospy.Time.now().to_sec()
@@ -35,7 +35,7 @@ def main():
 
 	while(current_angle <= angle):
 		t1 = rospy.Time.now().to_sec()
-		current_angle = 0.5*(t1-t0)
+		current_angle = 0.2*(t1-t0)
 		print(current_angle)
 		vel_msg.linear.x= 1
 		velocity_publisher.publish(vel_msg)
