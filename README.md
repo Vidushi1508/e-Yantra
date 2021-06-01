@@ -1,4 +1,3 @@
-# e-Yantra
 #!/usr/bin/env python
 #Importing the required Python libraries
 import rospy 
